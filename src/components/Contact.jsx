@@ -1,19 +1,4 @@
-import { useState } from 'react'
-
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const subject = encodeURIComponent(`Portfolio inquiry from ${formData.name || 'a visitor'}`)
-    const body = encodeURIComponent(
-      `Name: ${formData.name || 'Not provided'}\nEmail: ${formData.email || 'Not provided'}\n\n${formData.message || ''}`
-    )
-    window.location.href = `mailto:supunjayamal07@gmail.com?subject=${subject}&body=${body}`
-  }
-
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value })
-
   return (
     <section id="contact" className="section" aria-labelledby="contact-title" style={{ paddingBottom: '6rem' }}>
       <div className="container">
@@ -36,7 +21,12 @@ export default function Contact() {
           border: '1px solid rgba(255,255,255,0.06)',
           backdropFilter: 'blur(20px)'
         }}>
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <form action="https://formsubmit.co/supunjayamal07@gmail.com" method="POST" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_subject" value="New Portfolio Message!" />
+            <input type="hidden" name="_captcha" value="false" />
+            
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 <label htmlFor="name" style={{ fontSize: '0.9rem', color: '#d1d5db', fontWeight: 500 }}>Name</label>
@@ -45,8 +35,6 @@ export default function Contact() {
                   id="name" 
                   name="name" 
                   required 
-                  value={formData.name} 
-                  onChange={handleChange}
                   placeholder="John Doe"
                   style={{
                     padding: '0.8rem 1rem',
@@ -66,8 +54,6 @@ export default function Contact() {
                   id="email" 
                   name="email" 
                   required 
-                  value={formData.email} 
-                  onChange={handleChange}
                   placeholder="john@example.com"
                   style={{
                     padding: '0.8rem 1rem',
@@ -89,8 +75,6 @@ export default function Contact() {
                 name="message" 
                 rows="5" 
                 required 
-                value={formData.message} 
-                onChange={handleChange}
                 placeholder="Hello, I'd like to talk about..."
                 style={{
                   padding: '0.8rem 1rem',
