@@ -65,7 +65,12 @@ export default function Projects() {
                   </svg>
                   Deep Learning · Computer Vision
                 </span>
-                <span className="project-card__badge" title="Recognized as a top 10 project out of 33 competitive entries">🏆 Top 10 / 33 Entries</span>
+                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                  <span className="project-card__badge" title="Recognized as a top 10 project out of 33 competitive entries">🏆 Top 10 / 33 Entries</span>
+                  <a href="https://github.com/supunjayamal/Posea-Pose-Suggestion-App" target="_blank" rel="noopener noreferrer" className="project-card__badge" style={{ color: '#fff', background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', textDecoration: 'none' }}>
+                    View on GitHub ↗
+                  </a>
+                </div>
               </div>
 
               <h3 className="project-card__title" id="lumina-title">Posea — AI-Powered Pose Suggestion App</h3>
@@ -126,7 +131,7 @@ export default function Projects() {
                   </svg>
                   Machine Learning
                 </span>
-                <a href="https://github.com/EshanFernando0/Student_Performance_Prediction_Model.git" target="_blank" rel="noopener noreferrer" className="project-card__badge" style={{ color: '#fff', background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', textDecoration: 'none' }}>
+                <a href="https://github.com/supunjayamal/student_performance_prediction" target="_blank" rel="noopener noreferrer" className="project-card__badge" style={{ color: '#fff', background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', textDecoration: 'none' }}>
                   View on GitHub ↗
                 </a>
               </div>
