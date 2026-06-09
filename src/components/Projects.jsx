@@ -132,7 +132,7 @@ export default function Projects() {
               </div>
 
               <h3 className="project-card__title" id="student-perf-title">Student Performance Prediction Model</h3>
-              <p className="project-card__team">by <strong>Eshan Fernando</strong></p>
+              <p className="project-card__team">by <strong>Supun Karunathilaka</strong></p>
 
               <p className="project-card__overview">
                 An analytical machine learning model developed to predict and evaluate student
